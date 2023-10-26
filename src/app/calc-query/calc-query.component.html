@@ -1,0 +1,7 @@
+<mat-form-field [style.fontSize]="20">
+  <mat-label>Input</mat-label>
+  <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5" [formControl]="input"></textarea>
+  <mat-error *ngIf="input.invalid">Invalid input: {{input.errors?.['forbiddenChars'].value}}</mat-error>
+</mat-form-field>
+<p>RPN: {{output.rpn}}</p>
+<p>Output: {{output.value}}</p>
